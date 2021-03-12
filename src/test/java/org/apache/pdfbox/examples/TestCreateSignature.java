@@ -157,7 +157,8 @@ class TestCreateSignature
         new File("target/test-output").mkdirs();
 
         certificate = keyStore.getCertificateChain(keyStore.aliases().nextElement())[0];
-        System.setProperty("org.apache.pdfbox.examples.pdmodel.tsa","https://freetsa.org/tsr");
+//        System.setProperty("org.apache.pdfbox.examples.pdmodel.tsa","https://freetsa.org/tsr");
+        System.setProperty("org.apache.pdfbox.examples.pdmodel.tsa","http://tsa.safelayer.com:8093");
         tsa = System.getProperty("org.apache.pdfbox.examples.pdmodel.tsa");
 //        tsa = "http://tsa.safelayer.com:8093";
 

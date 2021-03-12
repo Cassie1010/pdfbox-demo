@@ -207,6 +207,7 @@ public class Loader
             source = new RandomAccessBuffer(input);
             scratchFile = new ScratchFile(memUsageSetting);
             PDFParser parser = new PDFParser(source, password, keyStore, alias, scratchFile);
+            parser.parse();
             return parser.getPDDocument();
         }
         catch (IOException ioe)
@@ -342,6 +343,7 @@ public class Loader
     {
         ScratchFile scratchFile = new ScratchFile(memUsageSetting);
         PDFParser parser = new PDFParser(raFile, password, keyStore, alias, scratchFile);
+        parser.parse();
         return parser.getPDDocument();
     }
     /**
@@ -456,6 +458,7 @@ public class Loader
             source = new RandomAccessBufferedFileInputStream(input);
             scratchFile = new ScratchFile(memUsageSetting);
             PDFParser parser = new PDFParser(source, password, keyStore, alias, scratchFile);
+            parser.parse();
             return parser.getPDDocument();
         }
         catch (IOException ioe)
