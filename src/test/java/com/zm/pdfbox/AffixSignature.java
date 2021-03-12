@@ -1,5 +1,5 @@
 package com.zm.pdfbox;
-import java.awt.geom.AffineTransform;
+/*import java.awt.geom.AffineTransform;
 
 import java.io.ByteArrayInputStream;
 
@@ -558,7 +558,7 @@ public class AffixSignature {
 
             CMSSignedDataGenerator generator = new CMSSignedDataGenerator();
 
-            /* Build the SignerInfo generator builder, that will build the generator... that will generate the SignerInformation... */
+            *//* Build the SignerInfo generator builder, that will build the generator... that will generate the SignerInformation... *//*
 
             SignerInfoGeneratorBuilder signerInfoBuilder = new SignerInfoGeneratorBuilder(new JcaDigestCalculatorProviderBuilder().setProvider(BC).build());
 
@@ -608,4 +608,4 @@ public class AffixSignature {
 
     }
 
-}
+}*/

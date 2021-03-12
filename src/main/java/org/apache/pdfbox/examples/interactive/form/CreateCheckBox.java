@@ -97,7 +97,7 @@ public class CreateCheckBox
             widget.setAppearance(ap);
             PDAppearanceEntry normalAppearance = ap.getNormalAppearance();
             
-            COSDictionary normalAppearanceDict = normalAppearance.getCOSObject();
+            COSDictionary normalAppearanceDict = (COSDictionary) normalAppearance.getCOSObject();
             normalAppearanceDict.setItem(COSName.Off, createAppearanceStream(document, widget, false));
             normalAppearanceDict.setItem(COSName.YES, createAppearanceStream(document, widget, true));
             
