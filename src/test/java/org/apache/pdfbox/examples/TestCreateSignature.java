@@ -123,9 +123,12 @@ class TestCreateSignature
 {
     private static final String IN_DIR = "src/test/resources/org/apache/pdfbox/examples/signature/";
     private static final String OUT_DIR = "target/test-output/";
-    private static final String KEYSTORE_PATH = IN_DIR + "keystore.p12";
+//    private static final String KEYSTORE_PATH = IN_DIR + "keystore.p12";
+//    private static final String KEYSTORE_PATH = "C:\\certtest\\atlas-ca.jks";
+    private static final String KEYSTORE_PATH = "C:\\certtest\\keystore.p12";
     private static final String JPEG_PATH = IN_DIR + "stamp.jpg";
     private static final String PASSWORD = "123456";
+//    private static final String PASSWORD = "atlas";
     private static final String TSA_RESPONSE = "tsa_response.asn1";
     private static final String SIMPLE_FORM_FILENAME = "target/TestCreateSignatureSimpleForm.pdf";
 
@@ -151,7 +154,8 @@ class TestCreateSignature
         certificateFactory = CertificateFactory.getInstance("X.509");
 
         // load the keystore
-        keyStore = KeyStore.getInstance("PKCS12");
+//        keyStore = KeyStore.getInstance("PKCS12");
+        keyStore = KeyStore.getInstance("JKS");
         keyStore.load(new FileInputStream(KEYSTORE_PATH), PASSWORD.toCharArray());
 
         new File("target/test-output").mkdirs();
